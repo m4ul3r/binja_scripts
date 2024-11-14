@@ -12,5 +12,5 @@ Big thanks to [playoff-rondo](https://github.com/thisusernameistaken)
 2. Set a breakpoint at any point of interest.
 3. Start the debugger.
 4. Continue to point of interest.
-5. Run the script.
+5. Run the script. (`File->Run File...` seems to fail, for now copy and paste it into the interactive python console)
 6. Now there is symbols and type information for the target modules.
