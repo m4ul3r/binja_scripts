@@ -48,7 +48,7 @@ for mod in dbg.modules[1:-1]:
     winja_bndb = str(winja_path / dll_path.name) + ".bndb"
     # check if bndb is cache
     if Path(winja_bndb).exists():
-        dll_bv = load(winja_bndb, False)
+        dll_bv = load(winja_bndb, True)
         print(f"[+] Loaded bndb: {winja_bndb}")
     else:
         dll_bv = load(mod.name)
@@ -67,7 +67,7 @@ dll_path = Path(Path("C:\\Windows\\System32") / mod.name)
 winja_bndb = str(winja_path / dll_path.name) + ".bndb"
 # check if bndb is cache
 if Path(winja_bndb).exists():
-    dll_bv = load(winja_bndb, False)
+    dll_bv = load(winja_bndb, True)
     print(f"[+] Loaded bndb: {winja_bndb}")
 else:
     dll_bv = load(dll_path)
