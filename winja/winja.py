@@ -53,7 +53,7 @@ for mod in dbg.modules[1:-1]:
     else:
         dll_bv = load(mod.name)
         dll_bv.update_analysis_and_wait()
-        dll_bv.save(winja_bndb)
+        dll_bv.create_database(winja_bndb)
         print(f"[+] Saved bndb: {winja_bndb}")
     # rebase dll
     dll_bv = dll_bv.rebase(mod.address, True)
@@ -72,7 +72,7 @@ if Path(winja_bndb).exists():
 else:
     dll_bv = load(dll_path)
     dll_bv.update_analysis_and_wait()
-    dll_bv.save(winja_bndb)
+    dll_bv.create_database(winja_bndb)
     print(f"[+] Saved bndb: {winja_bndb}")
 
 # rebase dll
